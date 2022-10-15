@@ -1,0 +1,63 @@
+body{
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board{
+    position: relative;
+    width: 700px;
+    height: 700px;
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-gap: 5px;
+}
+
+.square{
+    position: relative;
+    background-color: rgb(37, 121, 177);
+    cursor: pointer;
+}
+
+.square::before{
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 175px;
+}
+
+.square.X::before{
+    content: "X";
+    color: black;
+}
+
+.square.O::before{
+    content: "O";
+    color:black;
+}
+
+.winner{
+    margin-right: 10%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    text-align: center;
+}
+
+.winner button{
+    position: relative;
+    width: 200px;
+    height: 40px;
+    font-family: cursive;
+    font-size: large;
+    cursor: pointer;
+    background-color:purple;
+}
